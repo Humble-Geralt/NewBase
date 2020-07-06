@@ -1,0 +1,26 @@
+import time
+import random
+i = random.randint(1,10)
+print("------------------------------------")
+n = 1
+print("游戏只有五次机会哦")
+print("一位数字，十以内哦")
+temp = input("我心里想的几：")
+guess = int(temp)
+while guess != i:
+    n = n+1
+    temp = input("不对继续重新输入：")
+    guess = int(temp)
+    if guess == i:
+        print("我的天，居然猜对了")
+        print("猜对也没有奖励")
+    else:
+        if guess > i:
+            print("大了大了")
+        else:
+            print("小了小了")
+    if n == 5 and guess != i:
+        print("没猜出来啊")
+        guess = i
+print ("游戏结束")
+time.sleep(3)
